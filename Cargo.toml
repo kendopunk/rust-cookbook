@@ -1,0 +1,18 @@
+[package]
+name = "cookbook"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+random_generator = { path = "./libs/random_generator"}
+structs = { path = "./libs/structs"}
+vector_sort = { path = "./libs/vector_sort"}
+
+[workspace]
+members = [
+    "libs/random_generator",
+    "libs/vector_sort",
+    "libs/structs"
+]
