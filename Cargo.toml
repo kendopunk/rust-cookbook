@@ -6,13 +6,17 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+common = { path = "./libs/common"}
 random_generator = { path = "./libs/random_generator"}
+string_fun = {path = "./libs/string_fun"}
 structs = { path = "./libs/structs"}
 vector_sort = { path = "./libs/vector_sort"}
 
 [workspace]
 members = [
+    "libs/common",
     "libs/random_generator",
-    "libs/vector_sort",
-    "libs/structs"
+    "libs/string_fun",
+    "libs/structs",
+    "libs/vector_sort"
 ]

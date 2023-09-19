@@ -1,22 +1,16 @@
-// use structs::person::person::Person;
+#![warn(unused_imports)]
+#![warn(dead_code)]
+mod random_generator_mod;
+mod vector_sort_mod;
 
-fn get_first_word(s: &String) -> &str {
-    let b = s.as_bytes();
+use common::separator;
 
-    for (i, &item) in b.iter().enumerate() {
-        if item == b' ' {
-            return &s[0..i];
-        }
-    }
-
-    &s[..]
-}
+use crate::random_generator_mod::random_generator_mod as rando;
+use crate::vector_sort_mod::vector_sort_mod as vec_sort;
 
 fn main() {
-    println!("{}", "=".repeat(25));
-    println!("= main.rs");
-    println!("{}", "=".repeat(25));
+    separator("main.rs".to_string(), true);
 
-    let sentence = String::from("Fred a");
-    println!("{}", get_first_word(&sentence));
+    rando::kitchen_sink(false);
+    vec_sort::kitchen_sink(true);
 }
